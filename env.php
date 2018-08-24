@@ -1,7 +1,7 @@
 <?php
 
 putenv("HOST=localhost");
-putenv("PORT=3307");
+putenv("PORT=3306");
 putenv("LOGIN=root");
 putenv("PWD=");
-putenv("DB=cgp_script");
+putenv("DB=my_database");
