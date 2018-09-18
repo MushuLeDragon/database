@@ -57,13 +57,20 @@ $database = new Database(getenv("HOST"), getenv("PORT"), getenv("LOGIN"), getenv
 
 Put in `.gitignore` the line `env.php` to not commit this login database file.
 
-Change the parameters `localhost / 3306 / root /  / test` to your own parameters.
+Change the parameters `localhost / 3306 / root / pwd / test` to your own parameters.
 File `env.php` :
 
 ```php
 putenv("HOST=localhost");
 putenv("PORT=3306");
 putenv("LOGIN=root");
-putenv("PWD=");
+putenv("PWD=pwd");
 putenv("DB=test");
+```
+
+To require this variables, put in the code thoses lines :
+```php
+require "./path/to/the/file/env.php";
+
+getenv("HOST"), getenv("PORT"), getenv("LOGIN"), getenv("PWD"), getenv("DB");
 ```
